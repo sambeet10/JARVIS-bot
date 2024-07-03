@@ -78,8 +78,8 @@ function takeCommand(message) {
         speak("Opening Instagram...");
     } else if (message.includes("today is my birthday")){
         speak("Happy birthday dear friend");
-    }else if (message.toLowerCase().match(/^hi,? jarvis,? i'm (.*)$/i)) {
-        const name = message.toLowerCase().match(/^hi,? jarvis,? i'm (.*)$/i)[1];
+    }else if (message.toLowerCase().match(/^hi,? jarvis,? (i'm|i am) (.*)$/i)) {
+        const name = message.toLowerCase().match(/^hi,? jarvis,? (i'm|i am) (.*)$/i)[2];
         speak(`Hi ${name}, how are you?`);                              
     } else if (message.includes("i'm fine") || message.includes("i'm fine.thanks for asking")) {
         speak("That's great to hear! How can I help you?");
