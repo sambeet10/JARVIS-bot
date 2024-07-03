@@ -81,7 +81,7 @@ function takeCommand(message) {
     }else if (message.toLowerCase().match(/^hi,? jarvis,? (i'm|i am) (.*)$/i)) {
         const name = message.toLowerCase().match(/^hi,? jarvis,? (i'm|i am) (.*)$/i)[2];
         speak(`Hi ${name}, how are you?`);                              
-    } else if (message.includes("i'm fine") || message.includes("i'm fine.thanks for asking")) {
+    } else if (message.includes("i'm fine") || message.includes("i'm fine.thanks for asking")||message.includes("i am fine") || message.includes("i am fine.thanks for asking")) {
         speak("That's great to hear! How can I help you?");
     } else {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
